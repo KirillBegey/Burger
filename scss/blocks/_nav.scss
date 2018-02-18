@@ -1,0 +1,36 @@
+.nav__list {
+  display: flex;
+  align-items: center;
+}
+
+.nav__item {
+	white-space: nowrap;
+	margin-right: rem(2px);
+
+	&:last-child {
+		margin-right: 0;
+		&:after {
+			display: none;
+		}
+  }
+    
+	&:after {
+        display: inline-block;
+        vertical-align: middle;
+        content: ' ';
+        @include circle(rem(5px), #fff);
+        margin: 0 rem(12px) rem(5px) rem(12px);
+  }
+}
+
+.nav__link {
+	font-size: rem(13px);
+	text-transform: uppercase;
+	color: white;
+	text-decoration: none;
+	@include ubuntu(medium);
+
+	&:hover {
+		text-decoration: underline;
+	}
+}

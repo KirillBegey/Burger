@@ -1,0 +1,10 @@
+.order-link {
+	padding: rem(9px) 0;
+	margin-left: 2%;
+    min-width: rem(100px);
+    transition: .5s;
+    
+    &:hover {
+     background-color: darken($orange, 7%);
+    }
+}

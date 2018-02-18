@@ -12,7 +12,7 @@ $phones: 480px;
 @import "_misc/_normalize.scss";
 
 // media
-@import "_misc/_media.scss";
+@import "_misc/_media.scss"; 
 
 // setups
 @import "_misc/_mixins.scss";
@@ -22,12 +22,9 @@ $phones: 480px;
 // blocks
 @import "blocks/_best.scss";
 @import "blocks/_btn.scss";
-@import "blocks/_burger-slider-wrap.scss";
-@import "blocks/_burgers.scss";
 @import "blocks/_fixed-menu.scss";
 @import "blocks/_footer.scss";
 @import "blocks/_hamburger-menu-link.scss";
-@import "blocks/_hamburger-menu.scss";
 @import "blocks/_header.scss";
 @import "blocks/_hero.scss";
 @import "blocks/_logo.scss";
@@ -37,10 +34,8 @@ $phones: 480px;
 @import "blocks/_nav.scss";
 @import "blocks/_order-link.scss";
 @import "blocks/_order.scss";
-@import "blocks/_popups.scss";
 @import "blocks/_reviews.scss";
 @import "blocks/_section.scss";
 @import "blocks/_socials.scss";
 @import "blocks/_team-acco.scss";
 @import "blocks/_team.scss";
-@import "blocks/_text-block.scss";

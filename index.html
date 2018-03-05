@@ -10,24 +10,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/main.css">
-    <script src="./js/svg4everybody.js"></script>
-    <script>
+    <script src="./js/svg4everybody.js" type="text/javascript"></script>
+    <script type="text/javascript">
         svg4everybody();
+    </script>
+    <script src="https://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        var piter_map;
+            ymaps.ready(function () {
+                piter_map = new ymaps.Map("map", {
+                    center: [59.93, 30.37],
+                    zoom: 12 
+                });
+                var myPlacemark1 = new ymaps.Placemark([59.974925, 30.306859], {}, {
+                    iconImageHref: './img/map/map-marker.png',
+                    iconImageSize: [46, 57]
+                });
+                piter_map.geoObjects.add(myPlacemark1);
+                var myPlacemark2 = new ymaps.Placemark([59.948103, 30.376091], {}, {
+                    iconImageHref: './img/map/map-marker.png',
+                    iconImageSize: [46, 57]
+                });
+                piter_map.geoObjects.add(myPlacemark2);
+                var myPlacemark3 = new ymaps.Placemark([59.917239, 30.487338], {}, {
+                    iconImageHref: './img/map/map-marker.png',
+                    iconImageSize: [46, 57]
+                });
+                piter_map.geoObjects.add(myPlacemark3);
+                var myPlacemark4 = new ymaps.Placemark([59.891846, 30.308467], {}, {
+                    iconImageHref: './img/map/map-marker.png',
+                    iconImageSize: [46, 57]
+                });
+                piter_map.geoObjects.add(myPlacemark4);
+            });
     </script>
     <title>Mr Burger - Мы делаем натуральные бургеры</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <div class="maincontent">
+        <div class="maincontent"> 
 
             <section class="section hero">
                 <div class="container">
                     <header class="header">
                         <div class="header__logo">
-                            <a class="logo" href="#">
+                            <a class="logo" href="index.html">
                                 <img class="logo__icon" src="img/logo.svg">
                             </a>
                         </div>
@@ -58,7 +87,7 @@
                             </div>
                             <div class="header__links">
                                 <a class="order-link btn" href="#">Заказать</a>
-                                <a class="hamburger-menu-link" href="">
+                                <a class="hamburger-menu-link" id="hamburger-menu-link">
                                     <div class="hamburger-menu-link__bars"></div>
                                 </a>
                             </div>
@@ -75,12 +104,40 @@
                             </div>
                         </div>
                     </div>
+
                 </div>
                 <a class="down-arrow" href="#">
                     <svg class="down-arrow__icon">
                         <use xlink:href="img/sprite/sprite.svg#arrow-scroll"></use>
                     </svg>
                 </a>
+                <div class="hamburger-menu" id="hamburger-menu">
+                    <a class="close-menu" id="close-menu">
+                        <svg class="close-menu__icon">
+                            <use xlink:href="img/sprite/sprite.svg#close-menu"></use>
+                        </svg>
+                    </a>
+                    <ul class="hamburger-menu__list">
+                        <li class="hamburger-menu__item">
+                            <a class="hamburger-menu__link" href="#">о нас</a>
+                        </li>
+                        <li class="hamburger-menu__item">
+                            <a class="hamburger-menu__link" href="#">бургеры</a>
+                        </li>
+                        <li class="hamburger-menu__item">
+                            <a class="hamburger-menu__link" href="#">команда</a>
+                        </li>
+                        <li class="hamburger-menu__item">
+                            <a class="hamburger-menu__link" href="#">меню</a>
+                        </li>
+                        <li class="hamburger-menu__item">
+                            <a class="hamburger-menu__link" href="#">отзывы</a>
+                        </li>
+                        <li class="hamburger-menu__item">
+                            <a class="hamburger-menu__link" href="#">контакты</a>
+                        </li>
+                    </ul>
+                </div>
             </section>
 
             <section class="section best">
@@ -128,6 +185,48 @@
                             </div>
                         </li>
                     </ul>
+                </div>
+            </section>
+
+            <section class="section burgers">
+                <div class="container">
+                    <div class="burgers__left">
+                        <a class="left-arrow" href="#">
+                            <svg class="left-arrow__icon">
+                                <use xlink:href="img/sprite/sprite.svg#arrow-scroll"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="burgers__center">
+                        <div class="burgers__center-img">
+                            <img class="burgers__img" src="img/content/burger-dark.png" alt="burger">
+                        </div>
+                        <div class="burgers__center-content">
+                            <div class="section__title section__title_white section__title-burgers">Dark BEEF Burger</div>
+                            <div class="burgers__desc">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.</div>
+                            <div class="burgers__order">
+                                <span class="burgers__price">500 </span><span class="burgers__price-desc">рублей</span>
+                                <a class="btn btn-burgers" href="#">Заказать</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="burgers__right">
+                        <a class="right-arrow" href="#">
+                            <svg class="right-arrow__icon">
+                                <use xlink:href="img/sprite/sprite.svg#arrow-scroll"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <a href="#" class="burgers__composition">
+                        <svg class="burgers__composition-img">
+                            <use xlink:href="img/sprite/sprite.svg#burger"></use>
+                        </svg>
+                        <div class="burgers__composition-desc">СОСТАВ</div>
+                    </a>
+                    <svg class="burgers__kkal-img">
+                        <use xlink:href="img/sprite/sprite.svg#kkal"></use>
+                    </svg>
+                    <div class="burgers__kkal-desc"><span class="burgers__kkal-nbrs">1200 </span>ККАЛ</div>
                 </div>
             </section>
 
@@ -501,5 +600,8 @@
             <a class="fixed-menu__link" href="" data-scroll-to="7"></a>
         </li>
     </ul>
+
+    <script src="./js/hamburger-menu.js"></script>
+
 </body>
 </html>

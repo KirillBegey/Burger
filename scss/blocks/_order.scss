@@ -146,10 +146,10 @@
   .order__radio-elem:checked {
     &+.order__radio-fake {
       &:after {
-        background: url("../img/form/check.svg") 50% no-repeat transparent;
+        background: url("../img/form/checkbox-active.png") 50% no-repeat transparent;
         background-size: contain;
-        width: rem(11px);
-        height: rem(9px);
+        width: rem(17px);
+        height: rem(15px);
       }
     }
   }

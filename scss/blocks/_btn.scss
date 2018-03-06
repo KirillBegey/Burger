@@ -9,3 +9,10 @@
 	padding: rem(9px) rem(16px);
 	@include ubuntu(medium);
 }
+
+.btn-burgers {
+
+	&:hover {
+     background-color: darken($orange, 7%);
+    }
+}

@@ -20,8 +20,22 @@
 		color: white;
 	}
 
+	&.section__title-burgers {
+		line-height: .9;
+		margin-bottom: 10%;
+
+		@include tablets {
+			width: 80%;
+			margin: 0 auto 4%;
+		}
+
+		@include phones {
+			line-height: 1.2;
+			margin: 0 auto 4%;
+		}
+	}
+
 	@include phones() {
 	font-size: rem(63px);
+	}
 }
-}
-

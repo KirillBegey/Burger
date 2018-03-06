@@ -25,6 +25,10 @@
   flex-direction: column;
   justify-content: center;
   padding-bottom: 15%;
+
+  @include phones {
+    padding-bottom: 30%;
+  }
 }
 
 .hero__right {
@@ -94,6 +98,10 @@
       width: rem(40px);
       height: rem(40px);
     }
+  }
+
+  @include phones {
+    bottom: rem(60px);
   }
 }
 
